@@ -5,4 +5,12 @@
   <%= @author.name %>
 </p>
 
+<p>
+  <b>Books:</b>
+  <ul>
+    <% @author.books.each do |book| %>
+      <li><%= book.title %></li>
+    <% end %>
+  </ul>
+</p>
 
