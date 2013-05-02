@@ -1,0 +1,16 @@
+<h1>New Author</h1>
+
+
+<%= form_tag(authors_url, method: 'post') do %>
+
+
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Create Author" %>
+  </div>
+<% end %>

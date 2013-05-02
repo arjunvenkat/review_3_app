@@ -1,0 +1,28 @@
+<h1>Authors</h1>
+
+<p><%= link_to 'Add a New Author', new_author_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @authors.each do |author| %>
+    <tr>
+      <td><%= author.name %></td>
+  
+      <td><%= link_to 'Show', author_url(author) %></td>
+      <td><%= link_to 'Edit', edit_author_url(author) %></td>
+      <td><%= link_to 'Destroy', author_url(author), method: 'delete', data: { confirm: "Do you really want to delete this author?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
