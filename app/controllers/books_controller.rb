@@ -15,7 +15,8 @@ class BooksController < ApplicationController
   def create
     @book = Book.new
     @book.title = params[:title]
-    
+    @book.author_id = params[:author_id]
+
     if @book.save
             redirect_to books_url
           else
@@ -30,7 +31,8 @@ class BooksController < ApplicationController
   def update
     @book = Book.find_by_id(params[:id])
     @book.title = params[:title]
-    
+    @book.author_id = params[:author_id]
+
     if @book.save
             redirect_to books_url
           else

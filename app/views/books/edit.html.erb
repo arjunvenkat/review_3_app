@@ -8,7 +8,11 @@
     <%= text_field_tag :title, @book.title %>
   </div>
 
-  
+  <div>
+    <%= label_tag :author_id %><br />
+    <%= number_field_tag :author_id, @book.author_id %>
+  </div>
+
   <div>
     <%= submit_tag "Update Book" %>
   </div>
